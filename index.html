@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">    
+   
+    <title>Jokeypo</title>
+</head>
+<body>
+ 
+
+    <div id='upper-bar'></div>
+    
+    <br><br><br>
+    
+    <aside>
+        <div id='background-aside'>
+        <div class="players"> 
+            <h3> The first to get 10 points is the winner!</h3>
+            <div class='alien-results'>
+                <img src="./images/alien.png" alt="alien" id="alien">
+                <h4>Score</h4>
+                <h5>0</h5>
+            </div> <br>
+            <div class='human-results'>
+                <img src="./images/human.png" alt="human" id="human"> 
+                <h4>Score</h4>
+                <h5>0</h5>
+            </div>
+        </div>
+        </div>
+
+
+    </aside>
+
+
+    <main>
+        <div class='flex-container'> 
+            <section class='chooses'>
+
+                <div>It's up to <strong>you</strong>: </div>
+                <div><input type="button" value='rock' class='btn-choose' id='rock-choice'></div>
+                <div><input type="button" value='paper' class='btn-choose' id='paper-choice'></div>
+                <div><input type="button" value='scissors' class='btn-choose' id='scissors-choice'></div>
+
+            </section>
+            <br><br>
+            <img src="" alt="" id="user-img">
+
+            <br><br><br><br>
+
+            <section class='chooses sec'>
+
+                <div>It's up to an <strong>alien</strong>: </div>
+                <div><input type="button" value='rock' class='btn-choose'></div>
+                <div><input type="button" value='paper' class='btn-choose' ></div>
+                <div><input type="button" value='scissors' class='btn-choose' ></div>
+
+            </section>
+            <br><br>
+            <img src="" alt="" id="alien-img">
+
+        </div>
+        <br><br>
+        <span>C`mon, you are just a human... aren't you?</span>
+
+
+    </main>
+
+    <div id='game-result'></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

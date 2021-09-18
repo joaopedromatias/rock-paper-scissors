@@ -1,0 +1,241 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#1a9cc8), to(#254cbb));
+  background: linear-gradient(90deg, #1a9cc8 0%, #254cbb 100%);
+  background: #1e1e1e;
+  margin: 0;
+  color: #27c227;
+}
+
+#upper-bar {
+  background-color: #071346;
+  width: 100%;
+  height: 40px;
+}
+
+@-webkit-keyframes upper-bar-movement {
+  0% {
+    background: #24075a;
+  }
+  20% {
+    background: #1e2368;
+  }
+  50% {
+    background: #5e2585;
+  }
+  75% {
+    background: #561175;
+  }
+  50% {
+    background: #120647;
+  }
+  100% {
+    background: #24075a;
+  }
+}
+
+@keyframes upper-bar-movement {
+  0% {
+    background: #24075a;
+  }
+  20% {
+    background: #1e2368;
+  }
+  50% {
+    background: #5e2585;
+  }
+  75% {
+    background: #561175;
+  }
+  50% {
+    background: #120647;
+  }
+  100% {
+    background: #24075a;
+  }
+}
+
+#upper-bar:hover {
+  -webkit-animation-name: upper-bar-movement;
+          animation-name: upper-bar-movement;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+main {
+  width: 80%;
+  max-width: 850px;
+  margin: auto;
+}
+
+.chooses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.chooses > div > .btn-choose {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #e0dbdb;
+  background: #75147e;
+  border: 0.5px dashed white;
+  border-radius: 4px;
+}
+
+.chooses:nth-child(n) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  margin: auto;
+}
+
+.sec {
+  -webkit-transform: translateX(-23px);
+          transform: translateX(-23px);
+}
+
+input.btn-choose {
+  color: green;
+}
+
+span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 70%;
+  margin: auto;
+  background: black;
+  color: green;
+  padding: 10px;
+  text-align: center;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.flex-container > img {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.players {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.players > h3 {
+  text-align: center;
+  color: black;
+}
+
+.alien-results {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 85px;
+  text-align: center;
+  color: #e6e644;
+}
+
+.alien-results > img {
+  width: 200px;
+  height: 220px;
+}
+
+.alien-results > h4 {
+  margin: 5px;
+}
+
+.alien-results > h5 {
+  font-size: 1.4rem;
+  margin: 5px;
+  color: #ffffff;
+}
+
+.human-results {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 400px;
+  text-align: center;
+  color: #e6e644;
+}
+
+.human-results > img {
+  width: 200px;
+  height: 200px;
+}
+
+.human-results > h4 {
+  margin: 5px;
+}
+
+.human-results > h5 {
+  font-size: 1.4rem;
+  margin: 5px;
+  color: #ffffff;
+}
+
+#background-aside {
+  width: 220px;
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background: #504e4e;
+  z-index: -1;
+}
+
+.players {
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
+@media (max-width: 580px) {
+  html {
+    font-size: 13px;
+  }
+  body {
+    background-color: aqua;
+  }
+}
+/*# sourceMappingURL=style.css.map */
