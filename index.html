@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">    
-   
     <title>Jokeypo</title>
 </head>
 <body>
  
-
     <div id='upper-bar'></div>
     
     <br><br><br>
@@ -19,16 +17,20 @@
     <aside>
         <div id='background-aside'>
         <div class="players"> 
-            <h3> The first to get 10 points is the winner!</h3>
+            <h3> The first to get 5 points is the winner!</h3>
             <div class='alien-results'>
                 <img src="./images/alien.png" alt="alien" id="alien">
                 <h4>Score</h4>
-                <h5>0</h5>
+                <h5 id='alien-score'>0</h5>
             </div> <br>
             <div class='human-results'>
                 <img src="./images/human.png" alt="human" id="human"> 
                 <h4>Score</h4>
-                <h5>0</h5>
+                <h5 id='user-score'>0</h5>
+            </div>
+
+            <div class='game-result-message'>
+                <h4 id='log'></h4>
             </div>
         </div>
         </div>
@@ -64,14 +66,16 @@
             <img src="" alt="" id="alien-img">
 
         </div>
-        <br><br>
+        <br>
         <span>C`mon, you are just a human... aren't you?</span>
-
-
+        
+        <br>
+        
+        <button id='reset-game'>Reset Game</button>
     </main>
+ 
+    <div class="finish-box"></div>
 
-    <div id='game-result'></div>
-
-    <script src="script.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>

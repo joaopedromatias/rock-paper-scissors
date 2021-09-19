@@ -3,17 +3,15 @@ html {
 }
 
 body {
-  background: -webkit-gradient(linear, left top, right top, from(#1a9cc8), to(#254cbb));
-  background: linear-gradient(90deg, #1a9cc8 0%, #254cbb 100%);
   background: #1e1e1e;
   margin: 0;
   color: #27c227;
 }
 
-#upper-bar {
-  background-color: #071346;
-  width: 100%;
-  height: 40px;
+main {
+  width: 80%;
+  max-width: 870px;
+  margin: auto;
 }
 
 @-webkit-keyframes upper-bar-movement {
@@ -58,6 +56,12 @@ body {
   }
 }
 
+#upper-bar {
+  background-color: #071346;
+  width: 100%;
+  height: 40px;
+}
+
 #upper-bar:hover {
   -webkit-animation-name: upper-bar-movement;
           animation-name: upper-bar-movement;
@@ -65,12 +69,6 @@ body {
           animation-duration: 7s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-}
-
-main {
-  width: 80%;
-  max-width: 850px;
-  margin: auto;
 }
 
 .chooses {
@@ -83,7 +81,7 @@ main {
       flex-wrap: nowrap;
 }
 
-.chooses > div > .btn-choose {
+.chooses div .btn-choose {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.1rem;
   padding-top: 5px;
@@ -113,10 +111,6 @@ main {
           transform: translateX(-23px);
 }
 
-input.btn-choose {
-  color: green;
-}
-
 span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,7 +126,7 @@ span {
   width: 70%;
   margin: auto;
   background: black;
-  color: green;
+  color: #058f05;
   padding: 10px;
   text-align: center;
   -webkit-transition-timing-function: ease-out;
@@ -162,31 +156,36 @@ span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
 }
 
-.players > h3 {
+.players h3 {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  font-weight: bold;
   text-align: center;
-  color: black;
+  color: #ffffff;
 }
 
 .alien-results {
   font-size: 1.4rem;
   position: absolute;
-  top: 85px;
+  top: 80px;
   text-align: center;
   color: #e6e644;
 }
 
-.alien-results > img {
+.alien-results img {
   width: 200px;
   height: 220px;
 }
 
-.alien-results > h4 {
+.alien-results h4 {
   margin: 5px;
 }
 
-.alien-results > h5 {
+.alien-results h5 {
   font-size: 1.4rem;
   margin: 5px;
   color: #ffffff;
@@ -195,21 +194,21 @@ span {
 .human-results {
   font-size: 1.4rem;
   position: absolute;
-  top: 400px;
+  top: 385px;
   text-align: center;
   color: #e6e644;
 }
 
-.human-results > img {
+.human-results img {
   width: 200px;
   height: 200px;
 }
 
-.human-results > h4 {
+.human-results h4 {
   margin: 5px;
 }
 
-.human-results > h5 {
+.human-results h5 {
   font-size: 1.4rem;
   margin: 5px;
   color: #ffffff;
@@ -225,17 +224,53 @@ span {
   z-index: -1;
 }
 
-.players {
-  -webkit-transform: translateY(60px);
-          transform: translateY(60px);
+.game-result-message {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  top: 635px;
+  color: #ffffff;
 }
 
-@media (max-width: 580px) {
-  html {
-    font-size: 13px;
-  }
-  body {
-    background-color: aqua;
-  }
+button#reset-game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #24ac2b;
+  background: #221c1c;
+  border: 0.5px dashed white;
+  border-radius: 4px;
+}
+
+button#reset-game:hover {
+  background: #2b2a2a;
+}
+
+.finish-box {
+  display: none;
+  line-height: 85vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5rem;
+  background: #0e0d0d;
+  -webkit-box-shadow: white 2px;
+          box-shadow: white 2px;
+  border-radius: 30px;
+  position: absolute;
+  top: 8vh;
+  left: 1vw;
+  width: 20vw;
+  height: 90vh;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 /*# sourceMappingURL=style.css.map */

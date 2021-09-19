@@ -3,10 +3,15 @@ html {
 }
 
 body {
-    background: linear-gradient(90deg, rgba(26,156,200,1) 0%, rgba(37,76,187,1) 100%);
     background: rgb(30,30,30);
     margin: 0;
     color: rgb(39, 194, 39);
+}
+
+main { 
+    width: 80%;
+    max-width: 870px;
+    margin: auto;
 }
 
 $button-color: rgb(117, 20, 126);
@@ -15,12 +20,6 @@ $button-text-color: rgb(224, 219, 219);
 @mixin flexVerticalCenter {
     display: flex;
     align-items: center;
-}
-
-#upper-bar { 
-    background-color: rgb(7, 19, 70);
-    width: 100%;
-    height: 40px;
 }
 
 @keyframes upper-bar-movement {
@@ -32,37 +31,36 @@ $button-text-color: rgb(224, 219, 219);
     100% {background: rgb(36, 7, 90)}
 } 
 
-#upper-bar:hover { 
-    animation-name: upper-bar-movement;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-}  
-
-main { 
-    width: 80%;
-    max-width: 850px;
-    margin: auto;
+#upper-bar { 
+    background-color: rgb(7, 19, 70);
+    width: 100%;
+    height: 40px;
+    &:hover { 
+        animation-name: upper-bar-movement;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+    }
 }
 
 .chooses {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
+    div { 
+        .btn-choose { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.1rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: $button-text-color;
+            background: $button-color;
+            border: 0.5px dashed rgb(255, 255, 255);
+            border-radius: 4px;
+        }
+    }
 }
-
-.chooses > div > .btn-choose {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.1rem;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    color: $button-text-color;
-    background: $button-color;
-    border: 0.5px dashed rgb(255, 255, 255);
-    border-radius: 4px;
-}
-
 
 .chooses:nth-child(n) { 
     @include flexVerticalCenter();
@@ -75,10 +73,6 @@ main {
     transform: translateX(-23px);
 }
 
-input.btn-choose { 
-    color: green;
-}
-
 span { 
     @include flexVerticalCenter();
     justify-content: center;
@@ -87,7 +81,7 @@ span {
     width: 70%;
     margin: auto;
     background: black;
-    color: green;
+    color: rgb(5, 143, 5);
     padding: 10px;
     text-align: center;
     transition-timing-function: ease-out;
@@ -104,58 +98,56 @@ span {
 .players { 
     @include flexVerticalCenter();
     justify-content: center;
+    transform: translateY(60px);
+    h3 { 
+        transform: translateY(-8px);
+        font-weight: bold;
+        text-align: center;
+        color: #ffffff;
+    }
 }
 
-.players > h3 { 
-    text-align: center;
-    color: black;
-}
 
-.alien-results{ 
+.alien-results { 
     font-size: 1.4rem;
     position: absolute;
-    top: 85px;
+    top: 80px;
     text-align: center;
     color: rgb(230, 230, 68);
-}
-
-.alien-results > img { 
-    width: 200px;
-    height: 220px;
-}
-
-.alien-results > h4 { 
-    margin: 5px;
-}
-
-.alien-results > h5 { 
-    font-size: 1.4rem;
-    margin: 5px;
-    color: #ffffff;
+    img { 
+        width: 200px;
+        height: 220px;
+    }
+    h4 { 
+        margin: 5px;
+    }
+    h5 { 
+        font-size: 1.4rem;
+        margin: 5px;
+        color: #ffffff
+    }
 }
 
 .human-results { 
     font-size: 1.4rem;
     position: absolute;
-    top: 400px;
+    top: 385px;
     text-align: center;
     color: rgb(230, 230, 68);
+    img { 
+        width: 200px;
+        height: 200px;
+    }
+    h4 { 
+        margin: 5px;
+    }
+    h5 { 
+        font-size: 1.4rem;
+        margin: 5px;
+        color: #ffffff
+    }
 }
 
-.human-results > img { 
-    width: 200px;
-    height: 200px;
-} 
-
-.human-results > h4 { 
-    margin: 5px;
-}
-
-.human-results > h5 { 
-    font-size: 1.4rem;
-    margin: 5px;
-    color: #ffffff
-}
 
 #background-aside {
     width: 220px;
@@ -167,16 +159,46 @@ span {
     z-index: -1;
 } 
 
-.players { 
-    transform: translateY(60px);
+.game-result-message {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    top: 635px;
+    color: #ffffff;
 }
 
-@media (max-width: 580px) { 
-    html { 
-        font-size: 13px;
+button#reset-game { 
+    display: flex;
+    margin-left: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgb(36, 172, 43);
+    background: rgb(34, 28, 28);
+    border: 0.5px dashed rgb(255, 255, 255);
+    border-radius: 4px;
+    &:hover { 
+        background: rgb(43, 42, 42);
     }
+}
 
-    body { 
-        background-color: aqua;
-    }
+.finish-box { 
+    display: none;
+    line-height: 85vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    background: rgb(14, 13, 13);
+    box-shadow: white 2px;
+    border-radius: 30px;
+    position: absolute;
+    top: 8vh;
+    left: 1vw;
+    width: 20vw;
+    height: 90vh;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
 }
