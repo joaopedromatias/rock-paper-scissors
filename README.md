@@ -1,4 +1,4 @@
-# This is a rock paper scissors game in a web page. 
+## This is a rock paper scissors game in a web page. 
 
 Can you beat the alien?
 
